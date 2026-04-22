@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Frost Music - Winter Ambient</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&amp;family=Work+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-tint": "#A5C9CA",
+            "inverse-on-surface": "#F8FAFC",
+            "surface-container": "#F1F5F9",
+            "surface-dim": "#E2E8F0",
+            "primary-fixed": "#D1E9F6",
+            "on-error": "#ffffff",
+            "surface-container-low": "#F8FAFC",
+            "on-primary": "#ffffff",
+            "on-background": "#1E293B",
+            "background": "#FFFFFF",
+            "surface-container-high": "#E2E8F0",
+            "inverse-primary": "#A5C9CA",
+            "on-primary-fixed-variant": "#334155",
+            "on-surface-variant": "#64748B",
+            "primary": "#394867",
+            "primary-fixed-dim": "#A5C9CA",
+            "on-surface": "#1E293B",
+            "tertiary": "#8EACCD",
+            "error-container": "#FEE2E2",
+            "secondary-container": "#E0E7FF",
+            "error": "#EF4444",
+            "primary-container": "#F0F9FF",
+            "outline-variant": "#CBD5E1",
+            "on-primary-fixed": "#0F172A",
+            "on-primary-container": "#0C4A6E",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-container": "#1E293B",
+            "on-secondary-container": "#1E293B",
+            "inverse-surface": "#0F172A",
+            "secondary-fixed-dim": "#94A3B8",
+            "surface-variant": "#F1F5F9",
+            "surface-bright": "#FFFFFF",
+            "on-secondary-fixed": "#0F172A",
+            "surface": "#FFFFFF",
+            "tertiary-fixed": "#E0F2FE",
+            "on-tertiary-fixed": "#0F172A",
+            "on-tertiary": "#ffffff",
+            "secondary-fixed": "#E2E8F0",
+            "on-secondary-fixed-variant": "#334155",
+            "tertiary-container": "#BAE6FD",
+            "on-error-container": "#7F1D1D",
+            "secondary": "#475569",
+            "tertiary-fixed-dim": "#7DD3FC",
+            "on-tertiary-fixed-variant": "#0C4A6E",
+            "on-secondary": "#ffffff",
+            "outline": "#94A3B8",
+            "surface-container-highest": "#E2E8F0"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Sora", "sans-serif"],
+            "display": ["Sora", "sans-serif"],
+            "body": ["Work Sans", "sans-serif"],
+            "label": ["Work Sans", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style type="text/tailwindcss">
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .shimmer-effect {
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      background-size: 200% 100%;
+      animation: shimmer 4s infinite linear;
+    }
+    .search-slide {
+      animation: slideDown 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-10px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .hide-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body antialiased min-h-screen pb-32">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-4 h-16 bg-white/80 backdrop-blur-md border-b border-blue-50 shadow-sm hidden md:flex">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-dim">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqjCdGX2i3PrDgXHcyi32eHLkWMHz8V2kGLPkv9Hcb2PoATmm68or-tujswuzLfwM1O39UH3SfzmuG8DSAosgCLYcN9ADMQa7YVdE36FywyHQ-ABXsXTB36CQ450Hi3EI_HHLPey-kFTH7QlzTUbSe0jA467iv2fGiUqLoCLMDqx1Js8FAYt5tWysz-JGKn3-RpyRbsf1L00ShqgJH4X_M3hY3JKohDDX096hHW0qwoWhH-ERPp3Uh3n2BmvQhI0YgpS21eUcYWPfa"/>
+</div>
+<h1 class="font-headline text-xl font-bold tracking-tight text-primary">Frost Music</h1>
+</div>
+<div class="flex gap-4">
+<button aria-label="Search" class="text-primary hover:bg-surface-container transition-colors p-2 rounded-full active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+</div>
+</header>
+<main class="pt-6 md:pt-20 px-4 max-w-7xl mx-auto space-y-10">
+<div class="md:hidden pt-2 search-slide">
+<div class="relative bg-surface-container rounded-2xl flex items-center px-4 py-3 border border-blue-50 shadow-sm focus-within:ring-1 focus-within:ring-primary/20 transition-all">
+<span class="material-symbols-outlined text-on-surface-variant mr-3">search</span>
+<input class="bg-transparent border-none outline-none w-full text-on-surface font-body placeholder:text-on-surface-variant/50 focus:ring-0 p-0 text-lg" placeholder="Ambient frost or lo-fi winter" type="text"/>
+</div>
+</div>
+<section>
+<div class="relative w-full h-64 md:h-80 rounded-[2rem] overflow-hidden shadow-xl shadow-blue-900/5 group">
+<img alt="Featured Artist" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgKUY2UU7OIvmou0jjXVvkNlkeyPabxv7h9GmwY2G1sBZKv-3-oOcmpBVpL8xZGB0AzMSYt6eAnTBw_5FDp7RNfTUsIuP9jJW1EpGJtdcWDC3L0cSHGoxmrLxxzAOdoJd_xg_AHX-OOQJ_5fiywiVOpADvklsDIudyv0f5Xx0LYSMteQuWrn9fLVicQ5Rchj-deiOnyWshT1g6pwdEdU1sKgpc85zytt6212DzVipSkOEm60XOP18tb2lBYjNpGQuXEg-lkePnn6yt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/30 to-transparent"></div>
+<div class="absolute inset-0 shimmer-effect opacity-30 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 p-6 md:p-8 w-full flex justify-between items-end">
+<div class="max-w-[70%]">
+<span class="inline-block px-3 py-1 bg-tertiary text-slate-900 text-[10px] font-bold rounded-full mb-3 uppercase tracking-[0.1em] font-label">Winter Collection</span>
+<h2 class="font-headline text-3xl md:text-5xl text-white mb-1 font-semibold">Crystal Echoes</h2>
+<p class="font-body text-blue-50/90 text-sm md:text-base font-light">Minimalist piano and frozen soundscapes.</p>
+</div>
+<button aria-label="Play Featured" class="bg-white text-primary w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-primary hover:text-white transition-all active:scale-95">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-4 px-2">
+<h3 class="font-headline text-2xl text-on-background font-semibold tracking-tight">Recent Chill</h3>
+<button class="text-tertiary text-sm font-label font-medium hover:text-primary transition-colors">History</button>
+</div>
+<div class="flex overflow-x-auto pb-6 -mx-4 px-4 gap-5 snap-x hide-scrollbar">
+<div class="flex-none w-40 md:w-52 snap-start group cursor-pointer">
+<div class="w-full aspect-square rounded-3xl overflow-hidden mb-3 shadow-md border border-blue-50 relative">
+<img alt="Album Art" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvwpM08CpmHFFT7Fl_B9y1SilVdHWSkX8IjLYg9w2BHyuWzl5KfHRkNEzTlR-8i80i23kZW1JRuqk9k_jYBlMIMeQki9xLqdDJnHKDIjEQn4qU5D74v_BqMja366BAJaF_9AQq5YukEXhdR_gsDh54h4ltR2cMmUYO3PMatRNT1lbqC96a_Y0nEs43Lho8bn2VNc5we4vJ3nPNv3Z9j-ZFpSNaWFMLb7niYlFsZu9J5W7FvZrXAYtcXPnXmovwXR-nuSZmKZKYYrlc"/>
+<div class="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<div class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<h4 class="font-headline text-sm font-bold text-on-surface truncate">First Snow</h4>
+<p class="font-body text-xs font-light text-on-surface-variant truncate">Ice Lo-fi</p>
+</div>
+<div class="flex-none w-40 md:w-52 snap-start group cursor-pointer">
+<div class="w-full aspect-square rounded-3xl overflow-hidden mb-3 shadow-md border border-blue-50 relative">
+<img alt="Album Art" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwpPi_THoR2CJkO_lBDubIicI9ohwK6Px5PVvQSfmK2wWgZIgoaXjQkziNWSC_IS96KeRCs1j2RWNqBDLq7MEVdXXiyTNA96AQZfc4CEIuTGAFRHZjn0AOgSbNsBelTf3v_MwCD9rA7qhzvcqx-2dpIlC605-_mTgm1k4ViycUW94hOksNXOAviIgW4Mk3Wf91LBZxigDEsc-NSW23PJzZC2eENd_VkBgj2zZgbyfPBDuJ0Z3WIQY2gARzUjNO3Q_uT8CBBa2RKQ_g"/>
+<div class="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+<div class="absolute inset-0 bg-slate-900/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-4xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<h4 class="font-headline text-sm font-bold text-on-surface truncate">Glacial Vocals</h4>
+<p class="font-body text-xs font-light text-on-surface-variant truncate">Ethereal Ambient</p>
+</div>
+<div class="flex-none w-40 md:w-52 snap-start group cursor-pointer">
+<div class="w-full aspect-square rounded-full overflow-hidden mb-3 shadow-md relative p-1 bg-surface-container border border-blue-100">
+<img alt="Artist Profile" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwXrDtprKI3LGn-BuibRetM5puW5z9uBufdc-CaZZmyBNrlXqDqlYYG2Tl4J1z5QvCV_faiYQix2EDdNKbFLPXKtUT6mn1UZ3gszVrKKAxDiITicFPUbFDdo0unGfMNQsr_YuTTT7hChEwEuFVHzebFnrELSytspVWHSm2qXTtBPUEwvik8Y4t0sCLmsUB72wb7s2p6VF4DFAzzm4LypBppcRLdI_kNyJpkEsVuyfhQ96eVvTtpjc-2Lv3M7xztOguNUuwRkMRv8ZL"/>
+</div>
+<h4 class="font-headline text-sm font-bold text-on-surface text-center truncate">The North Flow</h4>
+<p class="font-body text-xs font-light text-on-surface-variant text-center truncate">Curator</p>
+</div>
+<div class="flex-none w-40 md:w-52 snap-start group cursor-pointer">
+<div class="w-full aspect-square rounded-3xl overflow-hidden mb-3 shadow-md border border-blue-50 relative">
+<img alt="Album Art" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD_jIV4dVTpcvWq14bMXOvcXfqzvH0ff2Gihcd8A-1YBr0Yihic9N9-YHI7oC9iq_2MCIIVgXsQdOkcKViPf9kkDdtTfKwEnMn6rweXS93meUTEyRXxBciywIjEodI6LV2tJ6JvqYMOgk_OW_rh_QWDu1RJk_nirC0Ntvpxhc6VYu5XDvCJSTEij02z4AMBaWn0jw3jpCYGC3D-bxLzG-_RIf98r5t2Na8QnX6kWdAsna24d6Pl7bxIb2CkeexBO8_Jig-QX9A1iei"/>
+<div class="absolute inset-0 shimmer-effect opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
+</div>
+<h4 class="font-headline text-sm font-bold text-on-surface truncate">Deep Frost</h4>
+<p class="font-body text-xs font-light text-on-surface-variant truncate">Focus Library</p>
+</div>
+</div>
+</section>
+<section>
+<h3 class="font-headline text-2xl text-on-background font-semibold mb-4 px-2 tracking-tight">Trending Frost</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="bg-surface-container-low rounded-[2rem] p-4 flex gap-4 items-center shadow-sm border border-blue-50 hover:bg-white hover:shadow-md transition-all cursor-pointer group relative overflow-hidden">
+<div class="absolute inset-0 shimmer-effect opacity-10 pointer-events-none"></div>
+<img alt="Trending Track" class="w-24 h-24 rounded-2xl object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLwwSB_8JgEdKobVjr5KOM9aJOYQPrqHB004ygWlMsuY5Gsb83zlQc6CCXkuDGsZ1J5FhgXoiCqky0ms_ukgOiJHIl454nxNdbi_R4YcOV-iZguMavYD-zAtKdwaWFhn6k20AzWELd0P00Vu_2GBr-kcrq6SVGTqBhmTbk7JD9sZSoSeUS3JQKKdeanReBAwgyrYCLPVdfpRrxTx9FifoV187xQQWWVZL3exZbP67v0zrg5SKeZHDi95aV7QCBScBKmEosCiRjiYry"/>
+<div class="flex-1">
+<span class="text-[10px] font-bold text-tertiary mb-1 block uppercase tracking-widest font-label">#1 Winter Chart</span>
+<h4 class="font-headline text-xl text-on-surface font-semibold mb-0.5">Silver Slumber</h4>
+<p class="font-body text-sm font-light text-on-surface-variant">Nordic Classical</p>
+</div>
+<button class="w-11 h-11 rounded-full border border-blue-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-container-low rounded-2xl p-3 flex gap-4 items-center border border-blue-50 shadow-sm hover:bg-white transition-all cursor-pointer relative overflow-hidden group">
+<div class="absolute inset-0 shimmer-effect opacity-5 pointer-events-none"></div>
+<img alt="Trending Track" class="w-16 h-16 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0DX-kUdoTegTjKaNwgWaai32U2s0ocsfWdFgN8eKKoz-0MMJagP34wE87o3AZL_ovu-aUZvqShNe6bYqcEenOp4vY39-byszSyCN46eOr51ot4ddBvBztPBo-cSQ0caFSy8lznxTplaTmKUa4BBhayhHFVSQ_vfQqge9r73T-TPf35YHZNK8k7kx7K735QJAYSwhDJy_U4iMzf_u_4NjNL8TFNGswSe1fDwrOpzNp4ppw5PdQFlDfMJ5oWGkEDXxnw054si8BcC23"/>
+<div class="flex-1">
+<h4 class="font-headline text-base font-bold text-on-surface">Night Breeze</h4>
+<p class="font-body text-xs font-light text-on-surface-variant">Gentle Lo-fi</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-3 flex gap-4 items-center border border-blue-50 shadow-sm hover:bg-white transition-all cursor-pointer relative overflow-hidden group">
+<div class="absolute inset-0 shimmer-effect opacity-5 pointer-events-none"></div>
+<img alt="Trending Track" class="w-16 h-16 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfQVqIuY6bJdFn3Ev12MBJ5-QeJP_Bm4fWBQxKuKMb5w1TMUwP3ReZNrto7nW-YdbyNU4JnE_wmghr70N6jib2K8nFxyEdjwa-IYDiCakdbxamxEKkz0UAiDVFWx-RiPHuYeGuVw-08ND__BpN-J20d1ezPXy5Nhmacemo3l7g6OOxDVr73gzO9a0hIP1o94iiJYKGAQGCGvHSB8CPjtxj_xLUx1dsQsWmK_NU_lE1YSeaxJBkzRVD-RgPoiNQqtqb3yMQsvSTXjBy"/>
+<div class="flex-1">
+<h4 class="font-headline text-base font-bold text-on-surface">Snowy Terrace</h4>
+<p class="font-body text-xs font-light text-on-surface-variant">Ambient Café</p>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="fixed bottom-[88px] left-3 right-3 md:left-auto md:right-6 md:bottom-6 md:w-96 z-40">
+<div class="bg-white/90 backdrop-blur-2xl rounded-2xl p-2.5 flex items-center gap-3 shadow-2xl shadow-slate-200 border border-blue-100 relative overflow-hidden group">
+<div class="absolute inset-0 shimmer-effect opacity-10 pointer-events-none"></div>
+<div class="relative w-12 h-12 rounded-xl overflow-hidden shadow-sm flex-none">
+<img alt="Currently Playing" class="w-full h-full object-cover animate-[spin_20s_linear_infinite]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkMI5PsCn7Vp9DRI8VbD4tBADMvIfyVqeBQe4vMIJoOWglcIRGV101e52NLNYS9FlmVmyqbshKCMYKKkPSQ2_qfOZy5CDjXBRjA3z8-X98GtIvbXYLHQrXerGMa1j0lsaFUPlpU1_7uxotI1RQFK4t91lgQIHRWbhcuplXb7Mn5To9hFweTv6m0vzPEvXiv_fjPDHTZoCh5ixsjtx0F93LU4jbU97Rx05oQz5YYHzZ6T0RPGF72XldB2cWGZ2e0DWaoTh8kUgS-bYR"/>
+<div class="absolute inset-0 bg-blue-900/5"></div>
+</div>
+<div class="flex-1 min-w-0">
+<h5 class="font-headline text-sm font-bold text-on-surface truncate">First Snow</h5>
+<p class="font-body text-[11px] font-light text-on-surface-variant truncate">The North Flow</p>
+</div>
+<div class="flex items-center gap-2 pr-1 flex-none">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+<button class="bg-primary/5 text-primary rounded-full w-10 h-10 flex items-center justify-center hover:bg-primary hover:text-white transition-all active:scale-90">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-50 overflow-hidden">
+<div class="h-full bg-primary/30 w-1/4 rounded-r-full"></div>
+</div>
+</div>
+</div>
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/95 backdrop-blur-lg border-t border-blue-50 shadow-[0_-8px_30px_rgba(203,213,225,0.1)] md:hidden">
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-primary transition-all active:scale-90 duration-300">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-body text-[10px] font-medium tracking-wide">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary relative px-4 py-1 active:scale-90 duration-300">
+<div class="absolute inset-0 bg-primary/5 rounded-2xl scale-x-125 scale-y-110"></div>
+<span class="material-symbols-outlined mb-1 relative" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-body text-[10px] font-bold tracking-wide relative">Explore</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-primary transition-all active:scale-90 duration-300">
+<span class="material-symbols-outlined mb-1">library_music</span>
+<span class="font-body text-[10px] font-medium tracking-wide">Library</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 hover:text-primary transition-all active:scale-90 duration-300">
+<span class="material-symbols-outlined mb-1">radio</span>
+<span class="font-body text-[10px] font-medium tracking-wide">Radio</span>
+</button>
+</nav>
+
+</body></html>

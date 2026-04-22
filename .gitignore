@@ -1,0 +1,23 @@
+# Deps
+node_modules
+
+# Build
+dist
+dist-ssr
+
+# Env — NEVER commit secrets
+.env
+.env.local
+.env.production
+workers/.env
+workers/service-account.json
+
+# Capacitor
+android
+ios
+.capacitor
+
+# Editor
+.vscode
+.DS_Store
+*.local

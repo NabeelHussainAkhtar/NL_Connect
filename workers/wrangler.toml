@@ -1,0 +1,27 @@
+name = "nl-connect-worker"
+main = "src/index.ts"
+compatibility_date = "2024-04-18"
+account_id = "11c5f4d1d76423b00643d3f6cc7b576c"
+workers_dev = true
+
+# D1 Database
+[[d1_databases]]
+binding  = "DB"
+database_name = "nldb"
+database_id   = "2c4f8ecf-70b1-4478-990c-36fb692822aa"
+
+# R2 Storage
+[[r2_buckets]]
+binding     = "STORAGE"
+bucket_name = "nlconnect"
+
+# AI Inference
+[ai]
+binding = "AI"
+
+[vars]
+YOUTUBE_API_KEY = "AIzaSyCK09YfsObsMFYdIQ8gPz1wwBkLAcoItr8"
+
+# Secrets — set via: wrangler secret put FIREBASE_SERVICE_ACCOUNT_KEY
+# NEVER hardcode service account JSON here
+# wrangler secret put VAPID_PRIVATE_KEY

@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* NL Connect Design System — Stitch Tokens */
+  --primary: #1351d3;
+  --primary-container: #3b6bed;
+  --on-primary: #ffffff;
+  --secondary: #4d41df;
+  --secondary-container: #675df9;
+  --tertiary: #8c1fc7;
+  --tertiary-container: #a741e2;
+
+  --surface: #fcf9f1;
+  --surface-dim: #dcdad2;
+  --surface-bright: #fcf9f1;
+  --surface-raised: #f6f3eb;
+  --surface-sunken: #e5e2da;
+  --surface-card: #ffffff;
+  --surface-container: #f1eee6;
+  --surface-container-high: #ebe8e0;
+  --surface-container-highest: #e5e2da;
+  --surface-container-low: #f6f3eb;
+  --surface-overlay: rgba(252, 249, 241, 0.95);
+
+  --text-primary: #1c1c17;
+  --text-secondary: #434654;
+  --text-tertiary: #737686;
+  --text-accent: #4f7dff;
+  --text-inverse: #f3f1e9;
+
+  --accent: #4f7dff;
+  --accent-glow: #4f7dff;
+  --accent-secondary: #6c63ff;
+  --accent-danger: #ba1a1a;
+  --accent-success: #30d158;
+  --accent-warning: #ffd60a;
+
+  --border-light: rgba(255, 255, 255, 0.8);
+  --border-dark: rgba(0, 0, 0, 0.06);
+  --border-color: #c3c5d7;
+
+  --shadow-raised: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-elevated: 0 8px 24px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
+  --shadow-sunken: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 16px rgba(0, 0, 0, 0.04);
+  --shadow-header: 0 1px 8px rgba(0, 0, 0, 0.06);
+  --shadow-nav: 0 -1px 12px rgba(0, 0, 0, 0.06);
+
+  --nav-bg: rgba(252, 249, 241, 0.92);
+  --nav-active-color: #4f7dff;
+  --nav-inactive: #737686;
+
+  --chat-sent-bg: #dcf8c6;
+  --chat-sent-text: #1c1c17;
+  --chat-received-bg: #ffffff;
+  --chat-received-text: #1c1c17;
+
+  --status-bar-height: env(safe-area-inset-top, 44px);
+  --nav-bar-height: env(safe-area-inset-bottom, 20px);
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--surface);
+
+  color-scheme: light dark;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #b5c4ff;
+    --primary-container: #3b6bed;
+    --on-primary: #00174d;
+    --secondary: #c4c0ff;
+    --secondary-container: #3622ca;
+    --tertiary: #e6b4ff;
+    --tertiary-container: #7100a6;
+
+    --surface: #131316;
+    --surface-dim: #131316;
+    --surface-bright: #39393c;
+    --surface-raised: #1f1f22;
+    --surface-sunken: #0e0e11;
+    --surface-card: #1f1f22;
+    --surface-container: #1f1f22;
+    --surface-container-high: #2a2a2d;
+    --surface-container-highest: #353438;
+    --surface-container-low: #1b1b1e;
+    --surface-overlay: rgba(19, 19, 22, 0.95);
+
+    --text-primary: #e4e1e6;
+    --text-secondary: #c7c4d7;
+    --text-tertiary: #908fa0;
+    --text-accent: #b5c4ff;
+    --text-inverse: #303033;
+
+    --accent: #b5c4ff;
+    --accent-glow: #7c87f3;
+    --accent-secondary: #ddb8ff;
+    --accent-danger: #ffb4ab;
+    --accent-success: #30d158;
+    --accent-warning: #ffd60a;
+
+    --border-light: rgba(255, 255, 255, 0.06);
+    --border-dark: rgba(0, 0, 0, 0.4);
+    --border-color: #464554;
+
+    --shadow-raised: 0 2px 8px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+    --shadow-sunken: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.2);
+    --shadow-header: 0 1px 12px rgba(0, 0, 0, 0.3);
+    --shadow-nav: 0 -1px 16px rgba(0, 0, 0, 0.4);
+
+    --nav-bg: rgba(19, 19, 22, 0.94);
+    --nav-active-color: #b5c4ff;
+    --nav-inactive: #908fa0;
+
+    --chat-sent-bg: #003dab;
+    --chat-sent-text: #e4e1e6;
+    --chat-received-bg: #2a2a2d;
+    --chat-received-text: #e4e1e6;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--surface);
+  overflow-x: hidden;
+}
+
+#root {
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  box-shadow: var(--shadow-elevated);
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+/* Premium Glassmorphism */
+.glass {
+  background: rgba(252, 249, 241, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  .glass {
+    background: rgba(19, 19, 22, 0.6);
+  }
+}
+
+/* Spotify-style Player Animations */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
+
+.player-pill {
+  border-radius: 12px;
+  margin: 0 8px 8px 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+.full-player-bg {
+  background: linear-gradient(180deg, var(--accent) 0%, #000 100%);
+  transition: background 0.5s ease;
+}
+
+.spotify-text-shadow {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Organic Shapes — Stitch 4px/8px system */
+.rounded-skeuo {
+  border-radius: 16px;
+}
+.rounded-skeuo-sm {
+  border-radius: 8px;
+}
+.rounded-skeuo-lg {
+  border-radius: 24px;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--text-tertiary);
+  border-radius: 10px;
+  opacity: 0.3;
+}
+
+/* SuperApp Card — Stitch tonal layering */
+.skeuo-card {
+  background: var(--surface-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-card);
+  border-radius: 16px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skeuo-card:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: var(--shadow-raised);
+}
+
+/* Stitch inset surface */
+.skeuo-inset {
+  background: var(--surface-sunken);
+  box-shadow: var(--shadow-sunken);
+  border: 1px solid var(--border-dark);
+  border-radius: 12px;
+}
+
+/* Badge */
+.chat-badge {
+  background: var(--accent-danger);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 10px;
+  box-shadow: 0 0 10px rgba(186, 26, 26, 0.4);
+}
+
+/* Chat Drawer */
+.chat-drawer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--surface-raised);
+  border-top: 1px solid var(--border-color);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-drawer-header {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--surface-sunken);
+}
+
+.chat-drawer-content {
+  height: 250px;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.sticker-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.gif-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+/* Harmony Sync Premium Gradients */
+.harmony-gradient-bg {
+  background: radial-gradient(circle at top left, var(--accent) 0%, transparent 60%),
+              radial-gradient(circle at bottom right, var(--tertiary) 0%, transparent 60%),
+              var(--surface);
+}
+
+.harmony-card-glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+}
+
+@media (prefers-color-scheme: light) {
+  .harmony-card-glass {
+    background: rgba(28, 28, 23, 0.03);
+  }
+}
+
+/* Premium Typography */
+.font-black-italic {
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: -0.05em;
+}
+
+/* Tab Bar Active State */
+.music-tab-active {
+  position: relative;
+  color: var(--accent);
+}
+.music-tab-active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+}
+
+/* No scrollbar utility */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Safe padding */
+.safe-p-y {
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

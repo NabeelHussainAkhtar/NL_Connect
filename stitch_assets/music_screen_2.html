@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vibe - Electric EDM</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Archivo:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "neon-violet": "#9D00FF",
+            "electric-pink": "#FF00E5",
+            "dark-slate": "#0F172A",
+            "surface-dim": "#1E293B",
+            "surface-container": "#111827",
+            "on-surface": "#F8FAFC",
+            "on-surface-variant": "#94A3B8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+          "fontFamily": {
+            "headline": ["Space Grotesk", "sans-serif"],
+            "display": ["Space Grotesk", "sans-serif"],
+            "body": ["Archivo", "sans-serif"],
+            "label": ["Archivo", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+<style type="text/tailwindcss">
+    @keyframes ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-content {
+      display: inline-block;
+      white-space: nowrap;
+      animation: ticker 15s linear infinite;
+    }
+    .bounce-hover:active {
+      transform: scale(0.85);
+      transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .bounce-hover {
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .bounce-hover:hover {
+      transform: scale(1.1);
+    }
+    body {
+      background-color: #0F172A;
+      color: #F8FAFC;
+    }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-dark-slate text-on-surface font-body antialiased min-h-screen pb-32">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-4 h-16 bg-dark-slate/80 backdrop-blur-md border-b border-white/10 shadow-[0_4px_30px_rgba(157,0,255,0.1)] hidden md:flex">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-electric-pink">
+<img alt="User Avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqjCdGX2i3PrDgXHcyi32eHLkWMHz8V2kGLPkv9Hcb2PoATmm68or-tujswuzLfwM1O39UH3SfzmuG8DSAosgCLYcN9ADMQa7YVdE36FywyHQ-ABXsXTB36CQ450Hi3EI_HHLPey-kFTH7QlzTUbSe0jA467iv2fGiUqLoCLMDqx1Js8FAYt5tWysz-JGKn3-RpyRbsf1L00ShqgJH4X_M3hY3JKohDDX096hHW0qwoWhH-ERPp3Uh3n2BmvQhI0YgpS21eUcYWPfa"/>
+</div>
+<h1 class="font-headline text-2xl font-bold tracking-tighter italic text-transparent bg-clip-text bg-gradient-to-r from-neon-violet to-electric-pink">ULTRA VIBE</h1>
+</div>
+<div class="flex gap-4">
+<button aria-label="Search" class="text-on-surface hover:text-electric-pink transition-colors p-2 rounded-full bounce-hover">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">search</span>
+</button>
+</div>
+</header>
+<main class="pt-6 md:pt-24 px-4 max-w-7xl mx-auto space-y-10">
+<div class="md:hidden pt-2">
+<div class="relative bg-surface-container/50 border border-white/10 rounded-2xl flex items-center px-4 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.3)] focus-within:ring-2 focus-within:ring-neon-violet/50 transition-all">
+<span class="material-symbols-outlined text-neon-violet mr-3">bolt</span>
+<input class="bg-transparent border-none outline-none w-full text-on-surface font-body placeholder:text-on-surface-variant/50 focus:ring-0 p-0 text-lg" placeholder="Search Bangers, DJs, or Festivals" type="text"/>
+</div>
+</div>
+<section>
+<div class="relative w-full h-72 md:h-96 rounded-[2.5rem] overflow-hidden shadow-[0_0_50px_rgba(157,0,255,0.2)] group border border-white/10">
+<img alt="Featured Artist" class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgKUY2UU7OIvmou0jjXVvkNlkeyPabxv7h9GmwY2G1sBZKv-3-oOcmpBVpL8xZGB0AzMSYt6eAnTBw_5FDp7RNfTUsIuP9jJW1EpGJtdcWDC3L0cSHGoxmrLxxzAOdoJd_xg_AHX-OOQJ_5fiywiVOpADvklsDIudyv0f5Xx0LYSMteQuWrn9fLVicQ5Rchj-deiOnyWshT1g6pwdEdU1sKgpc85zytt6212DzVipSkOEm60XOP18tb2lBYjNpGQuXEg-lkePnn6yt"/>
+<div class="absolute inset-0 bg-gradient-to-t from-dark-slate via-dark-slate/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-6 md:p-10 w-full flex justify-between items-end">
+<div class="max-w-[70%]">
+<span class="inline-block px-4 py-1.5 bg-electric-pink text-white text-[10px] font-black rounded-lg mb-4 uppercase tracking-[0.2em] font-label shadow-[0_0_15px_rgba(255,0,229,0.5)]">Hottest Drop</span>
+<h2 class="font-headline text-4xl md:text-6xl font-black text-white mb-2 leading-none">NEON REBELLION</h2>
+<p class="font-body text-on-surface-variant text-base md:text-xl font-medium">The definitive Mainstage Anthems of 2024.</p>
+</div>
+<button aria-label="Play Featured" class="bg-neon-violet text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(157,0,255,0.6)] hover:bg-electric-pink transition-all duration-300 bounce-hover">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+<section>
+<div class="flex justify-between items-end mb-6 px-2">
+<h3 class="font-headline text-2xl text-on-surface font-bold tracking-tight">On High Rotation</h3>
+<button class="text-electric-pink text-sm font-bold font-label uppercase tracking-widest hover:brightness-125 transition-all">Show All</button>
+</div>
+<div class="flex overflow-x-auto pb-6 -mx-4 px-4 gap-6 snap-x hide-scrollbar" style="scrollbar-width: none;">
+<div class="flex-none w-40 md:w-56 snap-start group cursor-pointer">
+<div class="w-full aspect-square rounded-[2rem] overflow-hidden mb-4 shadow-xl relative border border-white/5">
+<img alt="Album Art" class="w-full h-full object-cover group-hover:rotate-3 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvwpM08CpmHFFT7Fl_B9y1SilVdHWSkX8IjLYg9w2BHyuWzl5KfHRkNEzTlR-8i80i23kZW1JRuqk9k_jYBlMIMeQki9xLqdDJnHKDIjEQn4qU5D74v_BqMja366BAJaF_9AQq5YukEXhdR_gsDh54h4ltR2cMmUYO3PMatRNT1lbqC96a_Y0nEs43Lho8bn2VNc5we4vJ3nPNv3Z9j-ZFpSNaWFMLb7niYlFsZu9J5W7FvZrXAYtcXPnXmovwXR-nuSZmKZKYYrlc"/>
+<div class="absolute inset-0 bg-neon-violet/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-5xl bounce-hover" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<h4 class="font-headline text-lg font-bold text-on-surface truncate">CYBERPUNK CITY</h4>
+<p class="font-body text-sm text-on-surface-variant font-medium truncate">Techno Overload</p>
+</div>
+<div class="flex-none w-40 md:w-56 snap-start group cursor-pointer">
+<div class="w-full aspect-square rounded-[2rem] overflow-hidden mb-4 shadow-xl relative border border-white/5">
+<img alt="Album Art" class="w-full h-full object-cover group-hover:-rotate-3 group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwpPi_THoR2CJkO_lBDubIicI9ohwK6Px5PVvQSfmK2wWgZIgoaXjQkziNWSC_IS96KeRCs1j2RWNqBDLq7MEVdXXiyTNA96AQZfc4CEIuTGAFRHZjn0AOgSbNsBelTf3v_MwCD9rA7qhzvcqx-2dpIlC605-_mTgm1k4ViycUW94hOksNXOAviIgW4Mk3Wf91LBZxigDEsc-NSW23PJzZC2eENd_VkBgj2zZgbyfPBDuJ0Z3WIQY2gARzUjNO3Q_uT8CBBa2RKQ_g"/>
+<div class="absolute inset-0 bg-electric-pink/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-white text-5xl bounce-hover" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+</div>
+</div>
+<h4 class="font-headline text-lg font-bold text-on-surface truncate">VIRTUAL VOX</h4>
+<p class="font-body text-sm text-on-surface-variant font-medium truncate">Hyper-Pop Central</p>
+</div>
+<div class="flex-none w-40 md:w-56 snap-start group cursor-pointer">
+<div class="w-full aspect-square rounded-full overflow-hidden mb-4 shadow-xl relative p-1.5 bg-gradient-to-tr from-neon-violet to-electric-pink">
+<img alt="Artist Profile" class="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-500 border-4 border-dark-slate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwXrDtprKI3LGn-BuibRetM5puW5z9uBufdc-CaZZmyBNrlXqDqlYYG2Tl4J1z5QvCV_faiYQix2EDdNKbFLPXKtUT6mn1UZ3gszVrKKAxDiITicFPUbFDdo0unGfMNQsr_YuTTT7hChEwEuFVHzebFnrELSytspVWHSm2qXTtBPUEwvik8Y4t0sCLmsUB72wb7s2p6VF4DFAzzm4LypBppcRLdI_kNyJpkEsVuyfhQ96eVvTtpjc-2Lv3M7xztOguNUuwRkMRv8ZL"/>
+</div>
+<h4 class="font-headline text-lg font-bold text-on-surface text-center truncate">DJ NOV@</h4>
+<p class="font-body text-sm text-neon-violet text-center font-black truncate uppercase tracking-tighter">Verified Legend</p>
+</div>
+</div>
+</section>
+<section>
+<h3 class="font-headline text-2xl text-on-surface font-bold mb-6 px-2">Chart Toppers</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container rounded-[2.5rem] p-5 flex gap-5 items-center border border-white/5 hover:border-neon-violet/50 transition-all cursor-pointer group shadow-[0_10px_40px_rgba(0,0,0,0.4)]">
+<img alt="Trending Track" class="w-28 h-28 rounded-2xl object-cover shadow-2xl group-hover:scale-105 transition-transform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLwwSB_8JgEdKobVjr5KOM9aJOYQPrqHB004ygWlMsuY5Gsb83zlQc6CCXkuDGsZ1J5FhgXoiCqky0ms_ukgOiJHIl454nxNdbi_R4YcOV-iZguMavYD-zAtKdwaWFhn6k20AzWELd0P00Vu_2GBr-kcrq6SVGTqBhmTbk7JD9sZSoSeUS3JQKKdeanReBAwgyrYCLPVdfpRrxTx9FifoV187xQQWWVZL3exZbP67v0zrg5SKeZHDi95aV7QCBScBKmEosCiRjiYry"/>
+<div class="flex-1">
+<span class="text-[10px] font-black text-electric-pink mb-1 block uppercase tracking-[0.25em]">#1 Worldwide</span>
+<h4 class="font-headline text-2xl text-on-surface font-black mb-1">BASS RELOAD</h4>
+<p class="font-body text-sm text-on-surface-variant font-medium">Sonic Frontiers - Original Mix</p>
+</div>
+<button class="w-12 h-12 rounded-xl bg-neon-violet flex items-center justify-center text-white bounce-hover shadow-lg">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="flex flex-col gap-4">
+<div class="bg-surface-dim/40 rounded-3xl p-4 flex gap-4 items-center border border-white/5 hover:bg-surface-dim transition-colors cursor-pointer">
+<img alt="Trending Track" class="w-16 h-16 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0DX-kUdoTegTjKaNwgWaai32U2s0ocsfWdFgN8eKKoz-0MMJagP34wE87o3AZL_ovu-aUZvqShNe6bYqcEenOp4vY39-byszSyCN46eOr51ot4ddBvBztPBo-cSQ0caFSy8lznxTplaTmKUa4BBhayhHFVSQ_vfQqge9r73T-TPf35YHZNK8k7kx7K735QJAYSwhDJy_U4iMzf_u_4NjNL8TFNGswSe1fDwrOpzNp4ppw5PdQFlDfMJ5oWGkEDXxnw054si8BcC23"/>
+<div class="flex-1">
+<h4 class="font-headline text-base font-bold text-on-surface">GLITCH WAVE</h4>
+<p class="font-body text-xs text-on-surface-variant font-semibold">Neon Afterglow</p>
+</div>
+<button class="text-on-surface-variant hover:text-electric-pink bounce-hover">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="bg-surface-dim/40 rounded-3xl p-4 flex gap-4 items-center border border-white/5 hover:bg-surface-dim transition-colors cursor-pointer">
+<img alt="Trending Track" class="w-16 h-16 rounded-xl object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfQVqIuY6bJdFn3Ev12MBJ5-QeJP_Bm4fWBQxKuKMb5w1TMUwP3ReZNrto7nW-YdbyNU4JnE_wmghr70N6jib2K8nFxyEdjwa-IYDiCakdbxamxEKkz0UAiDVFWx-RiPHuYeGuVw-08ND__BpN-J20d1ezPXy5Nhmacemo3l7g6OOxDVr73gzO9a0hIP1o94iiJYKGAQGCGvHSB8CPjtxj_xLUx1dsQsWmK_NU_lE1YSeaxJBkzRVD-RgPoiNQqtqb3yMQsvSTXjBy"/>
+<div class="flex-1">
+<h4 class="font-headline text-base font-bold text-on-surface">MIDNIGHT DRIVE</h4>
+<p class="font-body text-xs text-on-surface-variant font-semibold">Synthwave Sessions</p>
+</div>
+<button class="text-on-surface-variant hover:text-electric-pink bounce-hover">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="fixed bottom-[88px] left-3 right-3 md:left-auto md:right-8 md:bottom-8 md:w-96 z-40">
+<div class="bg-dark-slate/90 backdrop-blur-2xl rounded-[2rem] p-3 flex items-center gap-4 shadow-[0_20px_50px_rgba(0,0,0,0.6)] border border-white/10 ring-1 ring-neon-violet/30">
+<div class="relative w-14 h-14 rounded-2xl overflow-hidden shadow-2xl flex-none border border-white/10">
+<img alt="Currently Playing" class="w-full h-full object-cover animate-[spin_12s_linear_infinite]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkMI5PsCn7Vp9DRI8VbD4tBADMvIfyVqeBQe4vMIJoOWglcIRGV101e52NLNYS9FlmVmyqbshKCMYKKkPSQ2_qfOZy5CDjXBRjA3z8-X98GtIvbXYLHQrXerGMa1j0lsaFUPlpU1_7uxotI1RQFK4t91lgQIHRWbhcuplXb7Mn5To9hFweTv6m0vzPEvXiv_fjPDHTZoCh5ixsjtx0F93LU4jbU97Rx05oQz5YYHzZ6T0RPGF72XldB2cWGZ2e0DWaoTh8kUgS-bYR"/>
+</div>
+<div class="flex-1 min-w-0 overflow-hidden">
+<div class="ticker-container overflow-hidden">
+<div class="ticker-content flex gap-8">
+<h5 class="font-headline text-base font-black text-white">SYSTEM SHOCK (EXTENDED TURBO MIX) ft. DJ NOV@ — CURRENTLY RIPPING THROUGH THE CHARTS</h5>
+<h5 class="font-headline text-base font-black text-white">SYSTEM SHOCK (EXTENDED TURBO MIX) ft. DJ NOV@ — CURRENTLY RIPPING THROUGH THE CHARTS</h5>
+</div>
+</div>
+<p class="font-body text-xs text-electric-pink font-bold uppercase tracking-widest">Ultra Records • 2024</p>
+</div>
+<div class="flex items-center gap-3 pr-2 flex-none">
+<button class="text-on-surface-variant hover:text-electric-pink transition-colors p-1 bounce-hover">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<button class="bg-white text-dark-slate w-10 h-10 rounded-full flex items-center justify-center bounce-hover">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<div class="absolute bottom-0 left-6 right-6 h-1 bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-neon-violet to-electric-pink w-[65%] rounded-full shadow-[0_0_10px_#FF00E5]"></div>
+</div>
+</div>
+</div>
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-8 pt-4 bg-dark-slate/95 backdrop-blur-xl border-t border-white/5 md:hidden">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-electric-pink transition-all bounce-hover group">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110">home</span>
+<span class="font-headline text-[10px] font-black uppercase tracking-tighter">Base</span>
+</button>
+<button class="flex flex-col items-center justify-center text-neon-violet bg-neon-violet/10 rounded-2xl px-5 py-2 bounce-hover">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+<span class="font-headline text-[10px] font-black uppercase tracking-tighter">Rave</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-electric-pink transition-all bounce-hover group">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110">inventory_2</span>
+<span class="font-headline text-[10px] font-black uppercase tracking-tighter">Vault</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:text-electric-pink transition-all bounce-hover group">
+<span class="material-symbols-outlined mb-1 group-hover:scale-110">sensors</span>
+<span class="font-headline text-[10px] font-black uppercase tracking-tighter">Live</span>
+</button>
+</nav>
+<style>
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+</body></html>
