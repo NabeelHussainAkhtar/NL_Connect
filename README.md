@@ -129,6 +129,9 @@ RAMSHA is more than a chatbot; it's an **Intent Router**.
 
 ## 📂 Project Structure
 
+<img width="1440" height="721" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/d98fb9b1-7fb3-4821-9d93-dac6d3a44e7b" />
+
+
 ```bash
 ├── android/               # Native Android Project Files
 ├── public/                # Static assets (Favicons, Logos)
