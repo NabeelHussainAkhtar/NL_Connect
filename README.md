@@ -12,7 +12,7 @@
 
 <div align="center">
   <h3>The World's Smartest All-in-One Digital Ecosystem</h3>
-  <p>Connect, Play, Listen, and Explore with the power of <b>JARVIS AI</b></p>
+  <p>Connect, Play, Listen, and Explore with the power of <b>RAMSHA AI</b></p>
 </div>
 
 ---
@@ -22,9 +22,8 @@
 **N&L Connect** is a premium SuperApp designed to unify your digital life. Built for performance and aesthetics, it offers a seamless blend of communication, entertainment, and artificial intelligence.
 
 ### 📸 App Experience
-| **AI Assistant (JARVIS)** | **Music Together** | **Gaming Lounge** |
-|:---:|:---:|:---:|
-| <img src="https://via.placeholder.com/200x400.png?text=JARVIS+AI+UI" width="200" /> | <img src="https://via.placeholder.com/200x400.png?text=Music+Sync+UI" width="200" /> | <img src="https://via.placeholder.com/200x400.png?text=Ludo+Gaming+UI" width="200" /> |
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/49890c53-eb1b-492f-acf4-c366ff9a1895" />
 
 ---
 
@@ -40,8 +39,8 @@
 *   **Local Library Scanner**: Scan and play your device's audio files natively.
 *   **Watch Party**: Synchronized YouTube video playback with integrated chat.
 
-### 🤖 JARVIS AI Engine
-*   **Contextual Memory**: JARVIS remembers your preferences and past conversations.
+### 🤖 RAMSHA AI Engine
+*   **Contextual Memory**: RAMSHA remembers your preferences and past conversations.
 *   **Intent Matching**: Seamlessly control the app using natural language.
 *   **Rich Tools**: Integrated weather, finance, dictionary, and sports data.
 
@@ -116,11 +115,11 @@ The communication engine is built on **PeerJS** for peer-to-peer signaling.
 *   **Background Playback**: Implemented using the `MediaSession API` and a silent loop audio trick. This prevents Android from killing the webview process when the app is minimized.
 *   **Local Scanner**: Uses `@capacitor/filesystem` to index the device's external storage, filtering for `.mp3` and `.wav` files and saving metadata to `localStorage` for offline access.
 
-### 🤖 JARVIS AI Engine (`/src/lib/ai`)
-JARVIS is more than a chatbot; it's an **Intent Router**.
-*   **Intent Matching**: Instead of sending every message to an expensive LLM, JARVIS first matches keywords locally. If you say "Play music", it triggers the `play_music` intent immediately.
-*   **Memory Persistence**: Conversations are serialized and stored in `localStorage`. JARVIS retrieves the last 50 messages to maintain context across app restarts.
-*   **Tool Integration**: JARVIS can call real-time APIs for Weather, Finance (CoinGecko), and Sports (CricAPI) to provide live data cards.
+### 🤖 RAMSHA AI Engine (`/src/lib/ai`)
+RAMSHA is more than a chatbot; it's an **Intent Router**.
+*   **Intent Matching**: Instead of sending every message to an expensive LLM, RAMSHA first matches keywords locally. If you say "Play music", it triggers the `play_music` intent immediately.
+*   **Memory Persistence**: Conversations are serialized and stored in `localStorage`. RAMSHA retrieves the last 50 messages to maintain context across app restarts.
+*   **Tool Integration**: RAMSHA can call real-time APIs for Weather, Finance (CoinGecko), and Sports (CricAPI) to provide live data cards.
 
 ### 🎮 Gaming Lounge (`/src/modules/gaming`)
 *   **Multiplayer Logic**: Uses a lobby-based system. Players join a shared `RoomID`, and game states (like a Ludo move or a Tic-Tac-Toe mark) are synced via the Cloudflare Worker.
