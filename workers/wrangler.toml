@@ -20,7 +20,7 @@ bucket_name = "nlconnect"
 binding = "AI"
 
 [vars]
-YOUTUBE_API_KEY = "AIzaSyCK09YfsObsMFYdIQ8gPz1wwBkLAcoItr8"
+# YOUTUBE_API_KEY should be set via: wrangler secret put YOUTUBE_API_KEY
 
 # Secrets — set via: wrangler secret put FIREBASE_SERVICE_ACCOUNT_KEY
 # NEVER hardcode service account JSON here
